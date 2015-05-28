@@ -28,21 +28,6 @@ public class MainActivity extends Activity {
         inicializarBroadcastReceiver();
     }
 
-    private void inicializarBroadcastReceiver() {
-        broadcastReceiver = new BroadcastReceiver() {
-            @Override
-            public void onReceive(Context context, Intent intent) {
-                Bundle extras = intent.getExtras();
-                if (extras != null) {
-                    String segundos = String.valueOf(extras.getInt("segundos"));
-                    String minutos = String.valueOf(extras.getInt("minutos"));
-                    segundosTemporizadorText.setText(segundos);
-                    minutosTemporizadorText.setText(minutos);
-                }
-            }
-        };
-    }
-
     @Override
     protected void onResume() {
         super.onResume();
@@ -73,6 +58,21 @@ public class MainActivity extends Activity {
         bindService(intent, conexionServicio, Context.BIND_AUTO_CREATE);
     }
 
+    private void inicializarBroadcastReceiver() {
+        broadcastReceiver = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                Bundle extras = intent.getExtras();
+                if (extras != null) {
+                    String segundos = String.valueOf(extras.getInt("segundos"));
+                    String minutos = String.valueOf(extras.getInt("minutos"));
+                    segundosTemporizadorText.setText(segundos);
+                    minutosTemporizadorText.setText(minutos);
+                }
+            }
+        };
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
@@ -91,8 +91,8 @@ public class MainActivity extends Activity {
     }
 
     public void onClickIniciar(View view) {
-        conexionServicio.setSegundosServicio(Integer.parseInt(segundosTemporizadorText.getText().toString()));
-        conexionServicio.setMinutosServicio(Integer.parseInt(minutosTemporizadorText.getText().toString()));
+        conexionServicio.setSegundosServicio(0);
+        conexionServicio.setMinutosServicio(0);
     }
 
     public void onClickDetener(View view) {

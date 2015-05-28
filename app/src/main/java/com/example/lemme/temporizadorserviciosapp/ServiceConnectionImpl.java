@@ -47,10 +47,6 @@ public class ServiceConnectionImpl implements ServiceConnection {
         return atado;
     }
 
-    public ServicioTemporizador getServicio() {
-        return servicio;
-    }
-
     public void setSegundosServicio(int segundosServicio) {
         servicio.setSegundos(segundosServicio);
     }
