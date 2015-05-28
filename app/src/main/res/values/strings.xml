@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Temporizador Servicios App</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_title">Temporizador</string>
+    <string name="detener">Detener</string>
+    <string name="iniciar">Iniciar</string>
+</resources>
