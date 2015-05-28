@@ -9,4 +9,6 @@
     <dimen name="segundos_temporizador_margin_left_5dp">5dp</dimen>
     <dimen name="btn_iniciar_margin_right_5dp">5dp</dimen>
     <dimen name="btn_detener_margin_left_5dp">5dp</dimen>
+    <dimen name="margin_edit_text_text_view_10dp">10dp</dimen>
+    <dimen name="padding_right_edit_text">20dp</dimen>
 </resources>

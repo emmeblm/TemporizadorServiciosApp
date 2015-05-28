@@ -17,13 +17,13 @@
         android:textStyle="bold"
         android:textSize="@dimen/abc_text_size_display_1_material"
         android:layout_margin="@dimen/title_margin_10dp"
-        android:layout_weight="0.33" />
+        android:layout_weight="0.25" />
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.33"
+        android:layout_weight="0.25"
         android:layout_margin="@dimen/text_fields_margin_10dp"
         android:gravity="center_vertical">
 
@@ -31,24 +31,45 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/minutosTemporizador"
-            android:layout_weight="0.5"
-            android:layout_marginRight="@dimen/minutos_temporizador_margin_right_5dp"
-            android:text="0" />
+            android:layout_weight="0.4"
+            android:layout_marginRight="@dimen/margin_edit_text_text_view_10dp"
+            android:text="0"
+            android:editable="false"
+            android:gravity="right"
+            android:paddingRight="@dimen/padding_right_edit_text" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:text="@string/min"
+            android:id="@+id/textViewMin" />
 
         <EditText
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/segundosTemporizador"
-            android:layout_weight="0.5"
-            android:layout_marginRight="@dimen/segundos_temporizador_margin_left_5dp"
-            android:text="0" />
+            android:layout_weight="0.4"
+            android:layout_marginLeft="@dimen/segundos_temporizador_margin_left_5dp"
+            android:text="0"
+            android:editable="false"
+            android:gravity="right"
+            android:layout_marginRight="@dimen/margin_edit_text_text_view_10dp"
+            android:paddingRight="@dimen/padding_right_edit_text"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:text="@string/seg"
+            android:id="@+id/textViewSeg" />
     </LinearLayout>
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.33"
+        android:layout_weight="0.25"
         android:layout_margin="@dimen/buttons_margin_10dp">
 
         <Button
@@ -74,5 +95,23 @@
             android:layout_marginLeft="@dimen/btn_detener_margin_left_5dp"
             android:gravity="center"
             android:onClick="onClickDetener" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.25"
+        android:gravity="center"
+        android:clickable="false">
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/continuar"
+            android:id="@+id/btnContinuar"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:onClick="onClickContinuar" />
     </LinearLayout>
 </LinearLayout>

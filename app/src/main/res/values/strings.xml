@@ -6,4 +6,7 @@
     <string name="app_title">Temporizador</string>
     <string name="detener">Detener</string>
     <string name="iniciar">Iniciar</string>
+    <string name="continuar">Continuar</string>
+    <string name="min">min</string>
+    <string name="seg">seg</string>
 </resources>
