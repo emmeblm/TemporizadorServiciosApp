@@ -30,16 +30,18 @@
         <EditText
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/temporizador1"
+            android:id="@+id/minutosTemporizador"
             android:layout_weight="0.5"
-            android:layout_marginRight="@dimen/temporizador1_margin_right_5dp" />
+            android:layout_marginRight="@dimen/minutos_temporizador_margin_right_5dp"
+            android:text="0" />
 
         <EditText
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/temporizador2"
+            android:id="@+id/segundosTemporizador"
             android:layout_weight="0.5"
-            android:layout_marginRight="@dimen/temporizador2_margin_left_5dp"/>
+            android:layout_marginRight="@dimen/segundos_temporizador_margin_left_5dp"
+            android:text="0" />
     </LinearLayout>
 
     <LinearLayout
